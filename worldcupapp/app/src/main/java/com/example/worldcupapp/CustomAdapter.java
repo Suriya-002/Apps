@@ -12,15 +12,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.worldcupapp.R;
+
 import java.util.ArrayList;
 
 
-public class CustomAdapter extends ArrayAdapter<CountryModelClass> {
+public class CustomAdapter extends ArrayAdapter<com.mastercoding.customlistview.CountryModelClass> {
 
-    private ArrayList<CountryModelClass> countryArraylist;
+    private ArrayList<com.mastercoding.customlistview.CountryModelClass> countryArraylist;
     Context context;
 
-    public CustomAdapter(ArrayList<CountryModelClass> data, Context context){
+    public CustomAdapter(ArrayList<com.mastercoding.customlistview.CountryModelClass> data, Context context){
         super(context, R.layout.item_list_layout,data);
         this.countryArraylist = data;
         this.context = context;
@@ -40,7 +42,7 @@ public class CustomAdapter extends ArrayAdapter<CountryModelClass> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         // Get the data item for this position
-        CountryModelClass dataModel = getItem(position);
+        com.mastercoding.customlistview.CountryModelClass dataModel = getItem(position);
 
         // Check if an existing view is being reused, otherwise inflate the view
         ViewHolder viewHolder;
